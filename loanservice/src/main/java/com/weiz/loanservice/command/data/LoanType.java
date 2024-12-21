@@ -38,13 +38,13 @@ public class LoanType extends AbstractEntity<Integer> {
             name = "min_amount",
             nullable = false
     )
-    Double minAmount;
+    Long minAmount;
 
     @Column(
             name = "max_amount",
             nullable = false
     )
-    Double maxAmount;
+    Long maxAmount;
 
     @Column(
             name = "interest_rate",

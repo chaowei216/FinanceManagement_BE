@@ -33,7 +33,7 @@ public class Loan extends AbstractEntity<UUID> {
             name = "interest_rate",
             nullable = false
     )
-    Long interestRate;
+    Double interestRate;
 
     @Column(
             name = "loan_date",
