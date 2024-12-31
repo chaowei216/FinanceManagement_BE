@@ -4,14 +4,12 @@ import com.weiz.loanservice.command.data.enums.LoanTypeStatusEnum;
 import lombok.*;
 import org.axonframework.modelling.command.TargetAggregateIdentifier;
 
-import java.util.UUID;
-
 @Getter
 @Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class CreateLoanTypeCommand {
+public class UpdateLoanTypeCommand {
 
     @TargetAggregateIdentifier
     String id;

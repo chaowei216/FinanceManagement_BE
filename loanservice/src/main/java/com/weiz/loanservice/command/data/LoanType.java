@@ -6,6 +6,7 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 import java.util.List;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -20,12 +21,11 @@ import java.util.List;
                         columnList = "loan_type_name", unique = true)
         }
 )
-public class LoanType extends AbstractEntity<Integer> {
+public class LoanType extends AbstractEntity<String> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "loan_type_id")
-    Integer id;
+    String id;
 
     @Column(
             name = "loan_type_name",

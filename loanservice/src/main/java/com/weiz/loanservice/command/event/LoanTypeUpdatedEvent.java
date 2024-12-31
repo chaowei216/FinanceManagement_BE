@@ -1,19 +1,18 @@
-package com.weiz.loanservice.command.command;
+package com.weiz.loanservice.command.event;
 
 import com.weiz.loanservice.command.data.enums.LoanTypeStatusEnum;
-import lombok.*;
-import org.axonframework.modelling.command.TargetAggregateIdentifier;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.FieldDefaults;
 
 import java.util.UUID;
 
 @Getter
 @Setter
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class CreateLoanTypeCommand {
+@FieldDefaults(level = AccessLevel.PRIVATE)
+public class LoanTypeUpdatedEvent {
 
-    @TargetAggregateIdentifier
     String id;
     String name;
     Long minAmount;

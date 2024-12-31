@@ -15,12 +15,11 @@ import java.util.UUID;
 @AllArgsConstructor
 @Entity
 @Table(name = "loan_schedules")
-public class LoanSchedule extends AbstractEntity<UUID> {
+public class LoanSchedule extends AbstractEntity<String> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "loan_schedule_id")
-    UUID id;
+    String id;
 
     @Column(
             name = "payment_due_date",

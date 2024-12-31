@@ -7,7 +7,6 @@ import lombok.experimental.FieldDefaults;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.UUID;
 
 @Getter
 @Setter
@@ -16,12 +15,11 @@ import java.util.UUID;
 @AllArgsConstructor
 @Entity
 @Table(name = "loans")
-public class Loan extends AbstractEntity<UUID> {
+public class Loan extends AbstractEntity<String> {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "loan_id")
-    UUID id;
+    String id;
 
     @Column(
             name = "loan_amount",
