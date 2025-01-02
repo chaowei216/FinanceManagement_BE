@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/configservice/pom.xml" />
         <option value="$PROJECT_DIR$/monitoradmin/pom.xml" />
         <option value="$PROJECT_DIR$/loanscheduleservice/pom.xml" />
+        <option value="$PROJECT_DIR$/paymentservice/pom.xml" />
       </list>
     </option>
   </component>
