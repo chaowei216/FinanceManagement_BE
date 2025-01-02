@@ -71,9 +71,9 @@ public class Loan extends AbstractEntity<String> {
     @JoinColumn(name = "loan_type_id", nullable = false)
     LoanType loanType;
 
-    @OneToMany(
-            mappedBy = "loan",
-            cascade = CascadeType.ALL
+    @Column(
+            name = "user_id",
+            nullable = false
     )
-    List<LoanSchedule> loanSchedules;
+    String userId;
 }
