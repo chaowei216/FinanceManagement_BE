@@ -10,12 +10,14 @@
         <module name="discoveryservice" />
         <module name="commonservice" />
         <module name="loanservice" />
+        <module name="configservice" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="commonservice" options="-parameters" />
+      <module name="configservice" options="-parameters" />
       <module name="discoveryservice" options="-parameters" />
       <module name="loanservice" options="-parameters" />
     </option>

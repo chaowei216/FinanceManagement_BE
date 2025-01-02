@@ -1,18 +1,14 @@
 spring:
   application:
     name: discovery-service
-
-server:
-  port: 8761
+  config:
+    import: configserver:http://localhost:8888
+  cloud:
+    config:
+      fail-fast: true
 
 # config eureka
 eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
-
-# logging
-logging:
-  level:
-    com.netflix.eureka: OFF
-    com.netflix.discovery: OFF
