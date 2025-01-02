@@ -13,6 +13,16 @@
         <module name="loanservice" />
         <module name="configservice" />
       </profile>
+      <profile name="Annotation profile for loanscheduleservice" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+        </processorPath>
+        <module name="loanscheduleservice" />
+      </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
@@ -20,6 +30,7 @@
       <module name="commonservice" options="-parameters" />
       <module name="configservice" options="-parameters" />
       <module name="discoveryservice" options="-parameters" />
+      <module name="loanscheduleservice" options="-parameters" />
       <module name="loanservice" options="-parameters" />
       <module name="monitoradmin" options="-parameters" />
     </option>
