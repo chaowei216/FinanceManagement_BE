@@ -12,3 +12,11 @@ management:
     web:
       exposure:
         include: '*'  # all endpoint
+
+# open api
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
