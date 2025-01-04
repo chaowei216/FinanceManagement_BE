@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/monitoradmin/pom.xml" />
         <option value="$PROJECT_DIR$/loanscheduleservice/pom.xml" />
         <option value="$PROJECT_DIR$/paymentservice/pom.xml" />
+        <option value="$PROJECT_DIR$/apigateway/pom.xml" />
       </list>
     </option>
   </component>
