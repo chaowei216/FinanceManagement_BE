@@ -4,6 +4,9 @@ server:
     context-path: /
 
 spring:
+  redis:
+    port: 6379
+    host: localhost
   cloud:
     gateway:
       discovery:
@@ -15,3 +18,12 @@ spring:
           uri: lb://loan-service
           predicates:
             - Path=/api/v1/loan-types/**
+          filters:
+            - name: RequestRateLimiter
+              args:
+                redis-rate-limiter.replenishRate: 10 # token/second
+                redis-rate-limiter.burstCapacity: 20 # capacity of bucket
+                redis-rate-limiter.requestedTokens: 1 # token / request
+            - KeyAuthFilter
+
+apiKey: chaoweiz
