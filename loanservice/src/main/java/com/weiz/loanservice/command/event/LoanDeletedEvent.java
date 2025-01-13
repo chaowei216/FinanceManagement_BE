@@ -1,14 +1,15 @@
 package com.weiz.loanservice.command.event;
 
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 @Getter
 @Setter
+@Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class LoanTypeDeletedEvent {
+@NoArgsConstructor
+@AllArgsConstructor
+public class LoanDeletedEvent {
 
     String id;
 }

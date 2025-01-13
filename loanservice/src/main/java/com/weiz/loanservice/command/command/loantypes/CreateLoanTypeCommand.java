@@ -1,10 +1,8 @@
-package com.weiz.loanservice.command.command;
+package com.weiz.loanservice.command.command.loantypes;
 
 import com.weiz.loanservice.command.data.enums.LoanTypeStatusEnum;
 import lombok.*;
 import org.axonframework.modelling.command.TargetAggregateIdentifier;
-
-import java.util.UUID;
 
 @Getter
 @Setter

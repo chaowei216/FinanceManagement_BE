@@ -1,8 +1,8 @@
 package com.weiz.loanservice.command.aggregate;
 
-import com.weiz.loanservice.command.command.CreateLoanTypeCommand;
-import com.weiz.loanservice.command.command.DeleteLoanTypeCommand;
-import com.weiz.loanservice.command.command.UpdateLoanTypeCommand;
+import com.weiz.loanservice.command.command.loantypes.CreateLoanTypeCommand;
+import com.weiz.loanservice.command.command.loantypes.DeleteLoanTypeCommand;
+import com.weiz.loanservice.command.command.loantypes.UpdateLoanTypeCommand;
 import com.weiz.loanservice.command.data.enums.LoanTypeStatusEnum;
 import com.weiz.loanservice.command.event.LoanTypeCreatedEvent;
 import com.weiz.loanservice.command.event.LoanTypeDeletedEvent;
@@ -17,7 +17,6 @@ import org.axonframework.modelling.command.AggregateLifecycle;
 import org.axonframework.spring.stereotype.Aggregate;
 import org.springframework.beans.BeanUtils;
 
-import java.util.UUID;
 
 @Aggregate
 @NoArgsConstructor

@@ -1,12 +1,12 @@
 package com.weiz.loanservice.command.controller.impl;
 
-import com.weiz.loanservice.command.command.CreateLoanTypeCommand;
-import com.weiz.loanservice.command.command.DeleteLoanTypeCommand;
-import com.weiz.loanservice.command.command.UpdateLoanTypeCommand;
+import com.weiz.loanservice.command.command.loantypes.CreateLoanTypeCommand;
+import com.weiz.loanservice.command.command.loantypes.DeleteLoanTypeCommand;
+import com.weiz.loanservice.command.command.loantypes.UpdateLoanTypeCommand;
 import com.weiz.loanservice.command.controller.LoanTypeController;
 import com.weiz.loanservice.command.data.enums.LoanTypeStatusEnum;
-import com.weiz.loanservice.command.model.LoanTypeRequest;
-import com.weiz.loanservice.command.model.LoanTypeUpdateRequest;
+import com.weiz.loanservice.command.model.loantype.LoanTypeRequest;
+import com.weiz.loanservice.command.model.loantype.LoanTypeUpdateRequest;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;

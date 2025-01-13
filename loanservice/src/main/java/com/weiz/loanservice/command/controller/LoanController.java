@@ -1,7 +1,7 @@
 package com.weiz.loanservice.command.controller;
 
-import com.weiz.loanservice.command.model.loantype.LoanTypeRequest;
-import com.weiz.loanservice.command.model.loantype.LoanTypeUpdateRequest;
+import com.weiz.loanservice.command.model.loan.LoanCreateRequest;
+import com.weiz.loanservice.command.model.loan.LoanUpdateRequest;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -10,15 +10,15 @@ import jakarta.validation.constraints.NotNull;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-@RequestMapping("/api/v1/loan-types")
-@Tag(name = "Loan Type Command")
-public interface LoanTypeController {
+@RequestMapping("/api/v1/loans")
+@Tag(name = "Loan Command Controller")
+public interface LoanController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(
-            summary = "Add new loan type",
-            description = "ADD endpoint for loan type",
+            summary = "Add new loan",
+            description = "ADD endpoint for loan",
             responses = {
                     @ApiResponse(
                             description = "Success",
@@ -38,13 +38,13 @@ public interface LoanTypeController {
                     )
             }
     )
-    String addLoanType(@Valid @RequestBody LoanTypeRequest request);
+    String addLoans(@Valid @RequestBody LoanCreateRequest request);
 
-    @PutMapping("/{id}")
+    @PatchMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @Operation(
-            summary = "Update loan type",
-            description = "UPDATE endpoint for loan type",
+            summary = "Update loan",
+            description = "UPDATE endpoint for loan",
             responses = {
                     @ApiResponse(
                             description = "Success",
@@ -64,13 +64,14 @@ public interface LoanTypeController {
                     )
             }
     )
-    String updateLoanType(@NotNull @PathVariable final String id, @Valid @RequestBody LoanTypeUpdateRequest request);
+    String updateLoan(@NotNull @PathVariable(name = "id") final String id,
+                      @Valid @RequestBody LoanUpdateRequest request);
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     @Operation(
-            summary = "Delete loan type",
-            description = "DELETE endpoint for loan type",
+            summary = "Delete loan",
+            description = "DELETE endpoint for loan",
             responses = {
                     @ApiResponse(
                             description = "Success",

@@ -1,4 +1,4 @@
-package com.weiz.loanservice.command.model;
+package com.weiz.loanservice.command.model.loantype;
 
 import com.weiz.loanservice.command.data.enums.LoanTypeStatusEnum;
 import jakarta.validation.constraints.*;

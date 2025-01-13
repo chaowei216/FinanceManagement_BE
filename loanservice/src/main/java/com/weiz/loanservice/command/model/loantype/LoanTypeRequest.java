@@ -1,4 +1,4 @@
-package com.weiz.loanservice.command.model;
+package com.weiz.loanservice.command.model.loantype;
 
 import jakarta.validation.constraints.*;
 import lombok.AccessLevel;
