@@ -15,7 +15,7 @@
         <module name="configservice" />
         <module name="paymentservice" />
       </profile>
-      <profile name="Annotation profile for loanscheduleservice" enabled="true">
+      <profile name="Annotation profile for notificationservice" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -23,6 +23,7 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
         </processorPath>
         <module name="loanscheduleservice" />
+        <module name="notificationservice" />
       </profile>
     </annotationProcessing>
   </component>
@@ -35,6 +36,7 @@
       <module name="loanscheduleservice" options="-parameters" />
       <module name="loanservice" options="-parameters" />
       <module name="monitoradmin" options="-parameters" />
+      <module name="notificationservice" options="-parameters" />
       <module name="paymentservice" options="-parameters" />
     </option>
   </component>
