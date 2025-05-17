@@ -88,4 +88,7 @@ public interface LoanController {
             }
     )
     String deleteLoanType(@PathVariable final String id);
+
+    @PostMapping("/sendMessage")
+    public void sendMessage(@RequestBody String message);
 }

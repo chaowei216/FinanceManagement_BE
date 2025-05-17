@@ -1,5 +1,6 @@
 package com.weiz.loanservice.command.controller.impl;
 
+import com.weiz.commonservice.services.KafkaService;
 import com.weiz.loanservice.command.command.loans.CreateLoanCommand;
 import com.weiz.loanservice.command.command.loans.DeleteLoanCommand;
 import com.weiz.loanservice.command.command.loans.UpdateLoanCommand;
@@ -23,6 +24,8 @@ import java.util.UUID;
 public class LoanControllerImpl implements LoanController {
 
     CommandGateway commandGateway;
+
+    KafkaService kafkaService;
 
     @Override
     public String addLoans(LoanCreateRequest request) {
@@ -75,5 +78,8 @@ public class LoanControllerImpl implements LoanController {
         return commandGateway.sendAndWait(command);
     }
 
-
+    @Override
+    public void sendMessage(String message) {
+        kafkaService.sendMessage("test", message);
+    }
 }

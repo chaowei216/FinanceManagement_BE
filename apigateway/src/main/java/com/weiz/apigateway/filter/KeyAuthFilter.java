@@ -21,7 +21,7 @@ public class KeyAuthFilter extends AbstractGatewayFilterFactory<KeyAuthFilter.Co
 
         return (exchange, chain) -> {
           if (!exchange.getRequest().getHeaders().containsKey("apiKey")) {
-            throw new RuntimeException("missing authorization information");
+            throw new RuntimeException("Missing authorization information");
           }
 
           System.out.println(apiKey);
